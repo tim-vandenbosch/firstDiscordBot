@@ -1,13 +1,20 @@
 {
   "name": "discord-bot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "sem's bot",
   "type": "commonjs",
   "main": "src/bot.js",
   "author": "Sem Radoes",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.4.0-dev.1637841784.54f937d",
-    "node.js": "0.0.1-security"
+    "discord.js": "13.3.1",
+    "dotenv":"10.0.0"
+  },
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
   }
 }
