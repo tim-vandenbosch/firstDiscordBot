@@ -1,13 +1,12 @@
+const Discord = require("Discord.js");
+const intents = new Discord.Intents(32767)
+const client = new Discord.Client({ intents });
+const dotenv = require("dotenv");
+dotenv.config(); // setting up configuration file
 
-const discord = require("discord.js");
+// Sems first Discord bot
 
-const token = require("./token.js");
-
-// const intents = new discord.Intents(32767);
-
-// const client = new discord.Client({ intents });
-
-const client = new discord.Client();
+console.clear();
 
 client.on('message', message => {
     // If the message is "ping"
@@ -22,8 +21,9 @@ client.on("ready", () => console.log("Bot is online"));
 client.once('reconnecting', () => {
     console.log('Reconnecting!');
    });
+
 client.once('disconnect', () => {
-console.log('Disconnect!');
+    console.log('Disconnect!');
 });
 
 client.on("messageCreate", message => {
@@ -31,4 +31,4 @@ client.on("messageCreate", message => {
     if(message.content === "hello") message.reply("hello");
 });
 
-client.login(token);
+client.login(process.env.TOKEN);

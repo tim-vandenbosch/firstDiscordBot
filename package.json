@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "sem's bot",
   "type": "commonjs",
-  "main": "src/bot.js",
+  "main": "src/index.js",
   "author": "Sem Radoes",
   "license": "ISC",
   "dependencies": {
